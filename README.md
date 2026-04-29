@@ -8,4 +8,6 @@ First 2D Game with Unity
 - Paddle shrink power-down
 - Ball duplication power-up
 
-[![Watch gameplay](https://img.youtube.com/vi/RfJfS5GgUBk/0.jpg)](https://youtu.be/RfJfS5GgUBk)
+▶️ **Watch the gameplay video here:**  
+https://www.youtube.com/watch?v=RfJfS5GgUBk
+
