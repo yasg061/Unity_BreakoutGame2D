@@ -26,8 +26,7 @@ public class BallMovement : MonoBehaviour
     {
         if (collision.CompareTag("Floor"))
         {
-            Debug.Log("Ball lost!");
-            // You can add logic here to reset the ball or end the game
+            Debug.Log("Ball lost! GAME OVER!");
         }
     }
 
