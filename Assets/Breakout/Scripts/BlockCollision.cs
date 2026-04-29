@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class BlockCollision : MonoBehaviour
 {
-    [Header("PowerUp")]
-    [SerializeField] private GameObject powerupPrefab;
-    [SerializeField] private float powerupSpawnChance = 0.8f; 
+    [Header("Settings")]
+    [SerializeField] private GameObject powerUpPrefab;
+    [SerializeField] private GameObject powerDownPrefab;
+    [SerializeField] private GameObject customPowerPrefab;
 
     private GameManager gameManager;
 
@@ -25,12 +26,22 @@ public class BlockCollision : MonoBehaviour
             Destroy(gameObject); 
 
             float randomValue = Random.value; 
-            Debug.Log("Random value power up: " + randomValue);
+            Debug.Log("Random value: " + randomValue);
 
-            if(randomValue < powerupSpawnChance)
+            if (randomValue < 0.3f)
             {
-                Instantiate(powerupPrefab, transform.position, Quaternion.identity); 
-                Debug.Log("Power up generated!");
+                Instantiate(powerUpPrefab, transform.position, Quaternion.identity); 
+                Debug.Log("Spawn: Grow PowerUp");
+            }
+            else if (randomValue < 0.6f)
+            {
+                Instantiate(powerDownPrefab, transform.position, Quaternion.identity); 
+                Debug.Log("Spawn: Shrink PowerUp");
+            }
+            else
+            {
+                Instantiate(customPowerPrefab, transform.position, Quaternion.identity);
+                Debug.Log("Spawn: Custom PowerUp");
             }
         }
     }

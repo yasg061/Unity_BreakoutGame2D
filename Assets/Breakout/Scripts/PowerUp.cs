@@ -15,7 +15,7 @@ public class PowerUp : MonoBehaviour
     {
         if (collision.CompareTag("Paddle"))
         {
-            Debug.Log("Power up collected! Paddle grows!");
+            Debug.Log("Power UP collected! Paddle grows!");
             Vector3 newScale = new Vector3(collision.transform.localScale.x * growthAmount, 
                                             collision.transform.localScale.y, 
                                             collision.transform.localScale.z);
